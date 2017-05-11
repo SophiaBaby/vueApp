@@ -1,0 +1,200 @@
+.link_tabs{
+   height: 70px;
+    line-height: 70px;
+}
+.link_tabs_list{
+
+}
+.link_tabs_selected{
+    color: #ff0000;
+}
+
+
+.personAccount{
+    width: 240px;
+    height: 140px;
+    background: url("../img/asset/bg-1.png") 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.personAccount_img{
+    width: 20px;
+    height: 22px;
+}
+.user_notice{
+    width: 960px;
+    /*padding: 30px 35px 40px 20px;*/
+    border: 1px solid #e9e9e9;
+    background: #f3f3f3;
+    box-sizing: border-box;
+}
+.user_notice_1{
+    margin-top: 35px;
+}
+.asset_title{
+    width: 100%;
+    height: 70px;
+}
+.product{
+    height: 450px;
+}
+.product_box{
+    height: 380px;
+}
+.product_found{
+    width: 760px;
+    height: inherit;
+}
+.product_notice{
+    width: 410px;
+    height: inherit;
+}
+.found_item{
+    height: 120px;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+}
+.found_item_img{
+    width: 160px;
+    height: inherit;
+}
+.found_item_det{
+    width: 385px;
+    height: inherit;
+}
+.found_item_btn{
+    width: 175px;
+    height: inherit;
+}
+.found_item_getDEt{
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    color: #ff6060;
+    border: 1px solid #ff6060;
+    border-radius: 20px;
+}
+.found_item_det_data{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: -5px;
+}
+.product_notice_img{
+    height: 200px;
+}
+.product_notice_list{
+    height: 170px;
+}
+.product_notice_item{
+    height: 24px;
+}
+.invest_team{
+    width: 100%;
+    height: 400px;
+}
+.cooperation{
+    height: 340px;
+}
+.cooperation_title{
+    height: 70px;
+}
+.cooperation_list{
+    height: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cooperation_list li img{
+    width: 270px;
+    height: 80px;
+}
+.invest{
+    width: 760px;
+}
+.invest_list{
+    background: #d9b471;
+}
+.team{
+    width: 410px;
+    height: inherit;
+}
+.team_list{
+    height: inherit;
+}
+.team_item{
+    height: 100px;
+}
+.team_item_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+.team_item_profile{
+    width: 290px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.invest_team_box{
+    height: 330px;
+}
+.invest_item{
+    width: 100%;
+    height: 110px;
+}
+.invest_item_img{
+    width: 110px;
+    height: 110px;
+}
+.invest_item_content{
+    width:  630px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+.bbd{
+    border-bottom: 1px dashed #fff;
+}
+
+.study_box{
+    width: 585px;
+}
+
+
+.news_box{
+    width: 585px;
+}
+.study_box_title{
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+}
+.fu_study_btn{
+    width: 90px;
+    height: 22px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 22px;
+    color: #2d5c00;
+    background: #fff;
+}
+.news_box_img{
+    width: 110px;
+    height: 110px;
+}
+.news_box_item{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed #ccc;
+}
+.news_box_content{
+    width: 475px;
+}
+.lh_24p{
+    height: 24px;
+}

@@ -1,0 +1,166 @@
+.container{
+    margin: 0 auto;
+    width: 1200px;
+    height: inherit;
+    /*background: hotpink;*/
+}
+body{
+    background: #fff;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+not supported by any browser */
+}
+
+.cp{
+    cursor: pointer;
+}
+.c7{
+    color: #777;
+}
+.c5{
+    color: #555;
+}
+.c3{
+    color: #333;
+}
+.c9{
+    color:#999 ;
+}
+.c6{
+    color: #666;
+}
+.cC{
+    color: #ccc;
+}
+.c0{
+    color: #000;
+}
+.cff{
+    color: #fff;
+}
+.cEF{
+    color: #efefef;
+}
+.f15{
+    font-size: 15px;
+}
+.f18{
+    font-size: 18px;
+}
+.f24{
+    font-size: 24px;
+}
+.f30{
+    font-size: 30px;
+}
+.f36{
+    font-size: 36px;
+}
+.cRed{
+    color: #ff0000;
+}
+.pl45{
+    padding-left: 45px;
+}
+.dis_inB{
+    display: inline-block;
+}
+.ml45{
+    margin-left: 45px;
+}
+.oH{
+    overflow: hidden;
+}
+.mb80{
+    margin-bottom: 80px;
+}
+.just_around{
+    display: flex;
+    justify-content: space-between;
+}
+.ver_around{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.line_gray{
+    width: 205px;
+    height: 1px;
+    background: #ddd;
+    position: relative;
+}
+.line_gray_in{
+    width: 20px;
+    height: 3px;
+    background: #ff0000;
+    position: absolute;
+    bottom: -1px;
+    left: 88px;
+}
+.ver_center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.just_center{
+    display: flex;
+    justify-content: center;
+}
+.ver_end{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.more_link{
+    display: inline-block;
+    color: #ff0000;
+}
+.only_two{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.only_three{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.only_one{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ver_end_center{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.rB{
+    right: 0;
+    bottom: 0;
+}
+.line_long{
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    position: absolute;
+    bottom: -5px;
+}
+.line_short{
+    width: 110px;
+    height: 3px;
+    background: #ff0000;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}

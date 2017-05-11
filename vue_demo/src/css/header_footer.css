@@ -1,0 +1,124 @@
+header{
+    width: 100%;
+    height: 140px;
+}
+.x_login_box{
+    height: 40px;
+    background: #171717;
+}
+.x_tab_box{
+    height: 100px;
+    background: #fff;
+    display: flex;
+    align-content: center;
+}
+.x_login_box_in{
+    width: 68px;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+    color: #d3d3d3;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.x_login_box_in a{
+    color: #d3d3d3;
+    font-size: 14px;
+}
+.x_logo_box{
+    width: 456px;
+    height: 50px;
+    margin-top: 22px;
+}
+.x_tabs{
+    height: inherit;
+    margin-right: -10px;
+}
+.x_tabs a{
+    width: 80px;
+    height: inherit;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #333;
+}
+a.tab_selected{
+    color: #fff;
+    background: red;
+}
+
+footer{
+    width: 100%;
+    background: #171717;
+    overflow: hidden;
+}
+.footer_list{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 42px;
+}
+.footer_list li:nth-child(1){
+    width: 200px;
+    margin-right: 100px;
+}
+
+.footer_list li:nth-child(2){
+    width: 360px;
+    margin-right: 100px;
+}
+.footer_list li:nth-child(3){
+    width: 200px;
+    margin-right: 100px;
+}
+.footer_title{
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    line-height: 76px;
+    border-bottom: 2px solid #333;
+    position: relative;
+}
+.footer_item,.footer_item a{
+    font-size: 14px;
+    color: #777;
+}
+.footer_bottom{
+    height: 40px;
+    background: #111;
+    line-height: 40px;
+    color: #999;
+}
+.office_code{
+    width: 100px;
+    height: 100px;
+}
+.dec_line{
+    width: 45px;
+    height: 2px;
+    background: #555;
+    position: absolute;
+    bottom: -2px;
+    left: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

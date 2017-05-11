@@ -1,0 +1,36 @@
+img{
+    display: block;
+}
+.xiteng_box{
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+.xiteng_carousel{
+    width: 380px;
+    height: inherit;
+    margin-left: 150px;
+}
+.xiteng_brief{
+    padding-top: 180px;
+}
+.qr_code{
+    width:110px;
+    height: 110px;
+}
+.carousel_dots{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.xiteng_carousel ul{
+    bottom: 47px;
+}
+.profession_carousel{
+    width: 318px;
+    height: 560px;
+    margin-top: 85px;
+}
