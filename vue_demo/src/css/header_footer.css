@@ -35,7 +35,7 @@ header{
     height: inherit;
     margin-right: -10px;
 }
-.x_tabs a{
+.x_tabs li{
     width: 80px;
     height: inherit;
     float: left;
@@ -45,12 +45,8 @@ header{
     margin-left: 20px;
     font-size: 16px;
     color: #333;
+    cursor: pointer;
 }
-a.tab_selected{
-    color: #fff;
-    background: red;
-}
-
 footer{
     width: 100%;
     background: #171717;

@@ -46,7 +46,9 @@
     </footer>
 </template>
 
+<script>
+  export default{
+    name: 'footer'
+  }
+</script>
 
-export default{
-name: 'footer'
-}
