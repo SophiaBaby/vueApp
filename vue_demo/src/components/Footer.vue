@@ -17,7 +17,7 @@
                             <div class="dec_line"></div>
                         </li>
                         <li class="footer_item mt30">
-                            <img class="mr10" src="../img/header_footer/address.png" alt="">北京市西城区百万庄大街11号两颗大厦3F</li>
+                            <img class="mr10" src="../img/header_footer/address.png" alt="">北京市西城区百万庄大街11号粮科大厦3F</li>
                         <li class="footer_item mt30" style="width: 100%">
                             <img class="mr10" src="../img/header_footer/e-mail.png" alt="">Customer&nbsp;service@futeng.com</li>
                         <li class="footer_item mt30 mb80">

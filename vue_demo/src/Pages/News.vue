@@ -1,12 +1,18 @@
 <template>
   <div>
     news hhhhhhh
+    <child message="快点让我看到你"></child>
   </div>
 </template>
 
 <script>
+  import child from '../components/login'
+
   export default{
-    name: 'nes'
+    name: 'news',
+    components: {
+      child
+    }
   }
 </script>
 

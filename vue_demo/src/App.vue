@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Fu_header></Fu_header>
-    <router-view></router-view>
+    <transition  name="slide-fade">
+        <router-view></router-view>
+    </transition>
     <Fu_footer></Fu_footer>
   </div>
 </template>
