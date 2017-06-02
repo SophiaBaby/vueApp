@@ -15,7 +15,7 @@
         width: 100%;
         height: 500px;
         background: yellowgreen;
-        font-size: 200px;
+        font-size: 50px;
         color: firebrick;
     }
 </style>

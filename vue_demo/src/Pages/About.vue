@@ -15,6 +15,6 @@
     width: 100%;
     height: 200px;
     background: honeydew;
-    font-size: 100px;
+    font-size: 50px;
     }
 </style>

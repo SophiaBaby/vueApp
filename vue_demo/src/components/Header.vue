@@ -5,13 +5,13 @@
                 <div class="x_logo_box fl">
                     <img src="../img/header_footer/logo.png" alt=""/>
                 </div>
-                <div class="x_tabs fr">
-                    <a href="#">首页</a>
-                    <a href="#">关于富腾</a>
-                    <a href="#">企业文化</a>
-                    <a href="#">集团业务</a>
-                    <a href="#">业务合作</a>
-                </div>
+                <ul class="x_tabs fr">
+                    <router-link to="/foo"  tag="li">首页</router-link>
+                    <router-link to="/about"  tag="li">关于富腾</router-link>
+                    <router-link to="/culture"  tag="li">企业文化</router-link>
+                    <router-link to="/news"  tag="li">集团业务</router-link>
+                    <router-link to="/profession"  tag="li">业务合作</router-link>
+                </ul>
                 <div class="x_login_box_in">
                     <a href="#">登录</a>
                     <span class="f12">|</span>

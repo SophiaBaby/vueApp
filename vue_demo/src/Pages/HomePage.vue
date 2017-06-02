@@ -145,7 +145,6 @@
 
 
 <script>
-import lunbo from '../lib/lunbo'
 export default {
   name: 'homePage',
   data () {
@@ -172,7 +171,6 @@ export default {
     }
   }
 }
-lunbo()
 </script>
 
 <style>
