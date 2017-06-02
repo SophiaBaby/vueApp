@@ -4,16 +4,6 @@
     height: inherit;
     /*background: hotpink;*/
 }
-body{
-    background: #fff;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Chrome/Safari/Opera */
-    -khtml-user-select: none; /* Konqueror */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-not supported by any browser */
-}
 
 .cp{
     cursor: pointer;
@@ -101,6 +91,14 @@ not supported by any browser */
     bottom: -1px;
     left: 88px;
 }
+.line_gray_inleft{
+    width: 20px;
+    height: 3px;
+    background: #ff0000;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
 .ver_center{
     display: flex;
     flex-direction: column;
@@ -163,4 +161,7 @@ not supported by any browser */
     position: absolute;
     left: 0;
     bottom: -1px;
+}
+.wrap{
+    flex-wrap: wrap;
 }

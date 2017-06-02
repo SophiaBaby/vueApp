@@ -13,7 +13,7 @@ Vue.use(Router)
 
 var routes = [
   {path: '/', name: 'Hello', component: HomePage},
-  {path: '/homePage', name: 'Hello', component: HomePage},
+  // {path: '/homePage', name: 'Hello', component: HomePage},
   {path: '/news', name: 'news', component: News},
   {path: '/about', name: 'about', component: About},
   {path: '/culture', name: 'culture', component: Culture},

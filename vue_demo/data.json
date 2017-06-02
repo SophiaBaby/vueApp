@@ -1,0 +1,31 @@
+{
+  "home_profession":{
+    "content": [
+      {
+        "c_name":"互联网",
+        "e_name":"Internet",
+        "url":"Internet.png",
+        "describe":"汇贝生活联合工商银行发行的具有打折优惠功能的O2O银行卡，该卡可在全国300万家特约商户享受刷卡打折的优惠。"
+      },
+      {
+        "c_name":"支付业务",
+        "e_name":"Payment",
+        "url":"payment.png",
+        "describe":"根据中国人民银行总行2016年12月20日公告，河南汇银丰信息技术有限公司获得央行第二次颁发《支付业务许可证》。"
+      },
+      {
+        "c_name":"资产管理",
+        "e_name":"Fund",
+        "url":"Fund.png",
+        "describe":"超过20年证券投资经验的资深基金经理专注于为高端客户提供卓越的财富管理服务，专业从事私募证券投资基金管理。"
+      },
+      {
+        "c_name":"财富小镇",
+        "e_name":"Fortune town",
+        "url":"Fortune-town.png",
+        "describe":"集团致力于雁栖湖财富小镇项目规划。规划建设北上广金融财富中心和新金融创新中心。是集团推动金融创新发展、服务经济转型升级的重大战略举措。"
+      }
+    ]
+  }
+
+}

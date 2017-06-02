@@ -1,0 +1,18 @@
+{
+  "runRedLight":{
+    "CurrentPage": 1,
+    "TotalPages": 0,
+    "TotalItems": 0,
+    "ItemsPerPage": 100,
+    "Items":[
+      {"DEVICEID":"121212","DEVICETYPE":"1","DEVICETIME":"2016-10-10","CREATEDTIME": "2016-10-11"},
+      {"DEVICEID":"124412","DEVICETYPE":"1","DEVICETIME":"2016-10-10","CREATEDTIME": "2016-10-11"},
+      {"DEVICEID":"121255","DEVICETYPE":"1","DEVICETIME":"2016-10-10","CREATEDTIME": "2016-10-11"},
+      {"DEVICEID":"121266","DEVICETYPE":"1","DEVICETIME":"2016-10-10","CREATEDTIME": "2016-10-11"}
+    ]
+  },
+  "redLightRoad": [
+    {"CREATEDTIME":"2017-03-03 09:41:44","DEVICEID":"2","ID":"45afdc60f33443d28fe0171d0df40d14","NAME":"1"},
+    {"CREATEDTIME":"2017-03-03 09:41:52","DEVICEID":"5","ID":"74cf7106f1fa406f9c32ad351e7dfc76","NAME":"2"}
+  ]
+}

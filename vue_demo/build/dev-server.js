@@ -89,3 +89,18 @@ module.exports = {
     server.close()
   }
 }
+
+
+var appData = require('../data.json')
+var home_profession = appData.home_profession;
+
+var apiRoute = express.Router();
+
+apiRoute.get('/home_profession',function(req, res){
+  res.json({
+    errno:0,//错误码
+    data: home_profession//具体数据
+  })
+})
+
+app.use('/api',apiRoute);

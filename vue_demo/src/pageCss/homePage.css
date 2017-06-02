@@ -1,35 +1,10 @@
-.homepage_banner{
-    width: 100%;
-}
 .profile{
-    margin-top: 70px;
-    height: 220px;
+    margin-top: 40px;
     margin-bottom: 30px;
 }
-.profession{
-    width: 100%;
-    height: 640px;
-    margin-bottom: 20px;
-}
-.fortuneTown{
-    width: 100%;
-    height: 480px;
-}
-.internet,.pay_found_box{
-     width: 590px;
-     height: 640px;
- }
-.found,.payment{
-    width: 590px;
+.found,.payment,.internet,.fortuneTown{
+    width: 585px;
     height: 310px;
-}
-.profile_img{
-    width: 380px;
-    height: 220px;
-}
-.groupFile,.companyVision{
-    width: 385px;
-    height: 220px;
 }
 .profile_content{
     line-height: 25px;
@@ -42,8 +17,8 @@
 }
 .news_img a{
     width: 100%;
-    height: 200px;
-    margin-bottom: 15px;
+    height: 180px;
+    background: yellow;
 }
 .news_img p{
     line-height: 22px;
@@ -53,38 +28,48 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.news_list{
-    margin-top: -15px;
-    width: 400px;
+.news_list,.profile_img,.groupFile{
+    width: 380px;
+    overflow: hidden;
 }
 .news_list_item{
     width: 100%;
     height: 42px;
     line-height: 40px;
-    font-size: 15px;
+    font-size: 16px;
     border-bottom: 1px dashed #ddd;
 }
-.news_list_item{
-
+.news_list_item:before{
+    content: '';
+    width: 1px;
+    height: 10px;
+    background: yellow;
 }
-.news_more{
-    align-self: flex-end;
-    margin-top: -15px;
+.cooperation_box{
+    width: 1201px;
+    height: 160px;
+    background: #eee;
 }
 .cooperation_item{
-    width: 285px;
-    height: 200px;
+    width: 1%;
+    flex: 1;
+    margin: 40px 0 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     position: relative;
+    border-right: 1px solid #ddd;
+}
+.cooperation_item img{
+    display: block;
+    margin: auto;
 }
 .cooperation_notice{
     width: 100%;
-    height: 40px;
-    color: #fff;
-    background: rgba(0,0,0,0.4);
+    color: #555;
+    font-size: 16px;
     position: absolute;
-    bottom: 0;
-    line-height: 40px;
-    text-align: center;
+    bottom: -20px;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -103,7 +88,15 @@
     right: 0;
     background: transparent;
     color: #fff;
-    font-family:Serif;
+}
+.cover_bg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top:0;
+    right: 0;
+    background: rgba(0,0,0,0.3);
+
 }
 .pad_big{
     padding: 0 45px 50px;
@@ -111,8 +104,21 @@
 .pad_small{
     padding: 30px;
 }
-
-
+.dis_none{
+    display: none;
+}
+#rotatingGlobe{
+    /*width: 100%;*/
+    height:630px;
+    /*background: rgba(255, 109, 71, 0.5);*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    opacity: 0.3;
+    margin: 0 auto;
+    text-align: center;
+}
 
 
 
