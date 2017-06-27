@@ -44,31 +44,8 @@
                     <p class="profile_title f20 c3 mb20">
                         <a class="c9 f14" href="#">更多</a>
                     </p>
-                    <ul class="news_list">
-                        <li class="news_list_item">
-                            <a class="dis_inB" href="#">热烈祝贺富腾稳健4期运作期圆满</a>
-                            <span class="fr c9">24/03</span>
-                        </li>
-                        <li class="news_list_item">
-                            <a class="dis_inB" href="#">热烈祝贺富腾稳健4期运作期圆满</a>
-                            <span class="fr c9">24/03</span>
-                        </li>
-                        <li class="news_list_item">
-                            <a class="dis_inB" href="#">热烈祝贺富腾稳健4期运作期圆满</a>
-                            <span class="fr c9">24/03</span>
-                        </li>
-                        <li class="news_list_item">
-                            <a class="dis_inB" href="#">热烈祝贺富腾稳健4期运作期圆满</a>
-                            <span class="fr c9">24/03</span>
-                        </li>
-                        <li class="news_list_item">
-                            <a class="dis_inB" href="#">热烈祝贺富腾稳健4期运作期圆满</a>
-                            <span class="fr c9">24/03</span>
-                        </li>
-                        <li class="news_list_item">
-                            <a class="dis_inB" href="#">热烈祝贺富腾稳健4期运作期圆满</a>
-                            <span class="fr c9">24/03</span>
-                        </li>
+                    <ul class="news_list" >
+                        <newsItem v-for="item in news" :key="item.id"></newsItem>
                     </ul>
                 </div>
                 <div class="groupFile">
@@ -90,12 +67,7 @@
         </section>
         <section class="w mb20">
             <div class="container">
-                <div class="news_title ver_center just_center">
-                    <p class=" f18 c3">
-                        集团业务<span class="cRed">GROUP BUSINESS</span>
-                    </p>
-                    <div class="line_gray mt10 mb20"><div class="line_gray_in"></div></div>
-                </div>
+                <centerTitle cn_title="集团业务" en_title="GROUP BUSINESS"></centerTitle>
                 <ul class="container just_around wrap">
                     <li v-for="(item,index) in items" class="internet pr mb30" @mouseover="show($event,index)"  @mouseleave="unshow($event,index)">
                         <div v-if="item.sel" class="cover_bg"></div>
@@ -114,29 +86,10 @@
         </section>
         <section class="cooperation">
             <div class="container oH">
-                <div class="cooperation_title ver_center just_center">
-                    <p class=" f20 c3">
-                        战略合作 <span class="cRed">COOPERATION</span>
-                    </p>
-                    <div class="line_gray mt10 mb20"><div class="line_gray_in"></div></div>
-                </div>
+                <centerTitle cn_title="战略合作" en_title="COOPERATION"></centerTitle>
                 <div class="just_around cooperation_box mb50">
-                    <div class="cooperation_item">
-                        <a  href="#"><img class="" src="../img/homepage/zhengfadaxue.png" alt=""/></a>
-                        <p class="cooperation_notice">富腾智库</p>
-                    </div>
-                    <div class="cooperation_item">
-                        <a  href="#"><img class="" src="../img/homepage/hexun.png" alt=""/></a>
-                        <p class="cooperation_notice">投资参股企业</p>
-                    </div>
-                    <div class="cooperation_item">
-                        <a class="pt20"  href="#"><img class="" src="../img/homepage/gonghang.png" alt=""/></a>
-                        <p class="cooperation_notice">战略合作伙伴</p>
-                    </div>
-                    <div class="cooperation_item">
-                        <a  href="#"><img class="" src="../img/homepage/zhoudafu.png" alt=""/></a>
-                        <p class="cooperation_notice">周大福珠宝</p>
-                    </div>
+                    <jSlide v-for="(cooImg,index) in cooImgs" key="index"
+                            v-bind:img-src="cooImg.src" v-bind:img-des="cooImg.des"></jSlide>
                 </div>
             </div>
         </section>
@@ -145,11 +98,26 @@
 
 
 <script>
+import jSlide from '../components/J_slide.vue'
+import centerTitle from '../components/centerTitle'
+import newsItem from '../components/newsItem'
 export default {
   name: 'homePage',
   data () {
     return {
-      items: []
+      items: [],
+      testItems: {
+        FirstName: 'John',
+        LastName: 'Doe',
+        Age: 30
+      },
+      news: [{id: 1}, {id: 2}],
+      cooImgs: [{des: '富腾智库', src: '../../static/img/coo/hexun.png'},
+        {des: '投资参股企业', src: '../../static/img/coo/zhengfadaxue.png'},
+        {des: '战略合作伙伴', src: '../../static/img/coo/gonghang.png'
+        },
+        {des: '周大福珠宝', src: '../../static/img/coo/zhoudafu.png'}],
+      scrolled: false
     }
   },
   mounted: function () {
@@ -168,7 +136,27 @@ export default {
     },
     unshow: function (event, index) {
       this.items[index].sel = false
+    },
+    handleScroll () {
+      if (window.scrollY > 200) {
+        console.log(window.screenY)
+      }
     }
+//    changeMsg: function () {
+//      this.msg = 'Hello world.'
+//      this.msg1 = this.$refs.msgDiv.innerHTML
+//      this.$nextTick(() => {
+//        this.msg2 = this.$refs.msgDiv.innerHTML
+//      })
+//      this.msg3 = this.$refs.msgDiv.innerHTML
+//    }
+  },
+  components: {
+    'my-component': [jSlide, centerTitle, newsItem]
+  },
+  ready () {
+    window.addEventListener('scroll', this.handleScroll)
+    console.log(window.screenY)
   }
 }
 </script>

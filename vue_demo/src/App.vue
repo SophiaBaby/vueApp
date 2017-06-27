@@ -10,8 +10,23 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data: function () {
+    return {
+      scroll: false
+    }
+  },
+  method: {
+    handleScroll () {
+      this.scrolled = window.scrollY > 0
+      alert('发生滚动事件')
+    }
+  },
+  ready () {
+    window.addEventListener('scroll', this.handleScroll)
+  }
 }
+
 </script>
 
 <style>
