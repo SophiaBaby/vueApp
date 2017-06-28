@@ -27,7 +27,20 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      // proxy all requests starting with /api to jsonplaceholder
+      '/dev': {
+        // target: 'http://114.251.53.22/futeng',
+        target: 'http://192.168.1.228:9009/futeng',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/dev': ''
+        },
+        filter: function (pathname, req) {
+          return pathname.match('^/dev') && req.method === 'POST'
+        }
+      }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

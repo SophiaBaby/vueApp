@@ -1,4 +1,5 @@
-<template id="header">
+<!--首页的头部-->
+<template id="header1">
     <header>
         <div class="x_tab_box">
             <div class="container pr">
@@ -22,16 +23,9 @@
     </header>
 </template>
 <script>
-
-export default{
-  name: 'header',
-  template: '#header'
-}
+  import Vue from 'vue'
+  Vue.component('header1', {
+    props: ['imgSrc', 'imgDes'],
+    template: '#header1'
+  })
 </script>
-
-<style>
-    li.router-link-active {
-        color: #fff;
-        background: #ff0000;
-    }
-</style>

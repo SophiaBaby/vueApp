@@ -8,12 +8,16 @@ header
     z-index: 100;
     right: 0;
     left: 0;
+    top:0;
 
     height: 100px;
 
     text-align: center;
 
     background: transparent;
+}
+.bRed{
+    background: #b01313;
 }
 .x_login_box_in
 {

@@ -1,31 +1,6 @@
 <template>
     <div>
-        <section class="w">
-            <div class="pai_banner oH pr">
-                <ul class="fl">
-                    <li class="fl pr oH">
-                        <canvas id='rotatingGlobe'
-                                style='cursor: move;'></canvas>
-                        <img src="../img/homepage/banner.png"  alt="1"/>
-                    </li>
-                    <li class="fl dis_none">
-                        <img src="../img/homepage/banner.png"  alt="2"/>
-                    </li>
-                    <li class="fl dis_none">
-                        <img src="../img/homepage/banner.png"  alt="3"/>
-                    </li>
-                </ul>
-                <div class="po option_view">
-                    <ol>
-                        <li class="mr10 sel"></li>
-                        <li class="mr10"></li>
-                        <li class="mr10"></li>
-                    </ol>
-                    <span class="subl f20"><img src="../img/homepage/arrow-left.png" alt=""/></span>
-                    <span class="subr f20"><img src="../img/homepage/arrow-right.png" alt=""/></span>
-                </div>
-            </div>
-        </section>
+        <carousel></carousel>
         <section class="profile">
             <div class="container just_around">
                 <div class="profile_img">
@@ -45,7 +20,7 @@
                         <a class="c9 f14" href="#">更多</a>
                     </p>
                     <ul class="news_list" >
-                        <newsItem v-for="item in news" :key="item.id"></newsItem>
+                        <newsItem v-for="item in news" :key="item.id" :news-title="item.newsTitle"></newsItem>
                     </ul>
                 </div>
                 <div class="groupFile">
@@ -95,12 +70,11 @@
         </section>
     </div>
 </template>
-
-
 <script>
 import jSlide from '../components/J_slide.vue'
 import centerTitle from '../components/centerTitle'
 import newsItem from '../components/newsItem'
+import carousel from '../components/util/carousel'
 export default {
   name: 'homePage',
   data () {
@@ -111,13 +85,13 @@ export default {
         LastName: 'Doe',
         Age: 30
       },
-      news: [{id: 1}, {id: 2}],
+      news: [{id: 1, newsTitle: '这是一个美好的时代'}, {id: 2, newsTitle: '这是一个美好的时代'}],
       cooImgs: [{des: '富腾智库', src: '../../static/img/coo/hexun.png'},
         {des: '投资参股企业', src: '../../static/img/coo/zhengfadaxue.png'},
         {des: '战略合作伙伴', src: '../../static/img/coo/gonghang.png'
         },
         {des: '周大福珠宝', src: '../../static/img/coo/zhoudafu.png'}],
-      scrolled: false
+      scroll: false
     }
   },
   mounted: function () {
@@ -129,6 +103,14 @@ export default {
       }
       _this.items = response
     })
+    window.addEventListener('scroll', this.handleScroll)
+//    this.$http({
+//      method: 'POST',
+//      url: 'dev/news/list',
+//      data: {'newsType': 2, 'pageNo': 0, 'size': 10}
+//    }).then(function (data) {
+//     console.log(data)
+//    })
   },
   methods: {
     show: function (event, index) {
@@ -138,25 +120,14 @@ export default {
       this.items[index].sel = false
     },
     handleScroll () {
-      if (window.scrollY > 200) {
-        console.log(window.screenY)
-      }
+      document.body.scrollTop
     }
-//    changeMsg: function () {
-//      this.msg = 'Hello world.'
-//      this.msg1 = this.$refs.msgDiv.innerHTML
-//      this.$nextTick(() => {
-//        this.msg2 = this.$refs.msgDiv.innerHTML
-//      })
-//      this.msg3 = this.$refs.msgDiv.innerHTML
-//    }
   },
   components: {
-    'my-component': [jSlide, centerTitle, newsItem]
-  },
-  ready () {
-    window.addEventListener('scroll', this.handleScroll)
-    console.log(window.screenY)
+    'carousel': carousel,
+    'newsItem': newsItem,
+    'jSlide': jSlide,
+    'centerTitle': centerTitle
   }
 }
 </script>

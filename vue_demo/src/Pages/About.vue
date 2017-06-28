@@ -1,20 +1,26 @@
 <template>
-  <div>
-    this is About Page!
+  <div class="about">
+    <span>this is About Page!</span>
+    <news msg="this is a good day"></news>
   </div>
 </template>
 
 <script>
+  import news from './about/news.vue'
   export default{
-    name: 'about'
+    name: 'about',
+    components: {
+      'news': news
+    }
   }
 </script>
 
 <style scoped>
-  div{
+  div.about{
+    margin-top: 200px;
     width: 100%;
     height: 200px;
-    background: honeydew;
+    background: #fff4f3;
     font-size: 50px;
     }
 </style>
