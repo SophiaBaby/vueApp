@@ -104,13 +104,18 @@ export default {
       _this.items = response
     })
     window.addEventListener('scroll', this.handleScroll)
-//    this.$http({
-//      method: 'POST',
-//      url: 'dev/news/list',
-//      data: {'newsType': 2, 'pageNo': 0, 'size': 10}
-//    }).then(function (data) {
-//     console.log(data)
-//    })
+    var data = JSON.stringify({
+      newsType: 'groupNews',
+      pageNo: 0,
+      size: 10
+    })
+    this.$http({
+      method: 'POST',
+      url: 'dev/news/titleList',
+      data: data
+    }).then(function (data) {
+      console.log(data)
+    })
   },
   methods: {
     show: function (event, index) {
@@ -130,6 +135,7 @@ export default {
     'centerTitle': centerTitle
   }
 }
+
 </script>
 
 <style>
