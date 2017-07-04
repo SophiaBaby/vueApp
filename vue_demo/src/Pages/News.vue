@@ -1,26 +1,23 @@
 <template>
-  <div>
-    news hhhhhhh
-    <child message="快点让我看到你"></child>
-  </div>
+    <div >
+        <div class="container">
+            <ul class="profession_index oH">
+                <router-link to="/found" class="fl" tag="li">资产管理</router-link>
+                <router-link to="/internet" class="fl" tag="li">互联网</router-link>
+                <router-link to="/pay" class="fl" tag="li">支付服务</router-link>
+                <router-link to="/town" class="fl" tag="li">财富小镇</router-link>
+            </ul>
+        </div>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-  import child from '../components/login'
-
   export default{
-    name: 'news',
-    components: {
-      child
-    }
+    name: 'news'
   }
 </script>
 
 <style scoped>
-    div{
-        width: 100%;
-        height: 500px;
-        background: lightgrey;
-        font-size: 20px;
-    }
+    @import "../pageCss/profession.css";
 </style>

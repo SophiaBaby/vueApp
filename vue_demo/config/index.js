@@ -1,5 +1,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
+var express = require('express');
+var proxy = require('http-proxy-middleware');
 
 module.exports = {
   build: {
@@ -29,15 +31,15 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       // proxy all requests starting with /api to jsonplaceholder
-      '/dev': {
+      '/futeng': {
         // target: 'http://114.251.53.22/futeng',
         target: 'http://192.168.1.228:9009/futeng',
         changeOrigin: true,
         pathRewrite: {
-          '^/dev': ''
+          '^/futeng': ''
         },
         filter: function (pathname, req) {
-          return pathname.match('^/dev') && req.method === 'POST'
+          return pathname.match('^/futeng') && req.method === 'POST'
         }
       }
     },

@@ -29,9 +29,9 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
     li.router-link-active {
         color: #fff;
-        background: #ff0000;
+        background: rgba(255,255,255,0.2);
     }
 </style>

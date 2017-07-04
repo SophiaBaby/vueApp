@@ -4,19 +4,6 @@
             <ul class="footer_list fl">
                 <li class="fl">
                     <ul>
-                        <li class="footer_title" style="width: 100%">关注我们
-                            <div class="dec_line"></div>
-                        </li>
-                        <li class="footer_item mt30">
-                            <img class="mr10" src="../img/header_footer/wechat.png" alt=""/>微信</li>
-                        <li class="footer_item mt30" style="width: 100%">
-                            <img class="mr10" src="../img/header_footer/tencent.png" alt=""/>腾讯微博</li>
-                        <li class="footer_item mt30 mb80">
-                            <img class="mr10" src="../img/header_footer/sina.png" alt=""/>新浪微博</li>
-                    </ul>
-                </li>
-                <li class="fl">
-                    <ul>
                         <li class="footer_title">加入我们
                             <div class="dec_line"></div>
                         </li>
@@ -50,18 +37,31 @@
                         </li>
                     </ul>
                 </li>
+                <li class="fl">
+                    <ul>
+                        <li class="footer_title" style="width: 100%">关注我们
+                            <div class="dec_line"></div>
+                        </li>
+                        <li class="footer_item mt30">
+                            <img class="mr10 dis_inB" src="../img/header_footer/wechat.png"/>微信</li>
+                        <li class="footer_item mt30" style="width: 100%">
+                            <img class="mr10 dis_inB" src="../img/header_footer/tencent.png" alt=""/>腾讯微博</li>
+                        <li class="footer_item mt30 mb80">
+                            <img class="mr10 dis_inB" src="../img/header_footer/sina.png" alt=""/>新浪微博</li>
+                    </ul>
+                </li>
                 <li class="fl pt100">
                     <ul class="oH qr_box">
                         <li class="fl mr10 tc">
-                            <img src="../img/header_footer/snow-leopard.png" alt="">
+                            <img src="../img/header_footer/snow-leopard.png" alt=""/>
                             <p class="f16 c9">海豹送水</p>
                         </li>
                         <li class="fl mr10 tc">
-                            <img src="../img/header_footer/xoteng.png" alt="">
+                            <img src="../img/header_footer/xoteng.png" alt=""/>
                             <p class="f16 c9">喜腾科技</p>
                         </li>
                         <li class="fl mr10 tc">
-                            <img src="../img/header_footer/futeng.png" alt="">
+                            <img src="../img/header_footer/futeng.png" alt=""/>
                             <p class="f16 c9">富腾资产</p>
                         </li>
                     </ul>

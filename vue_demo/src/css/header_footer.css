@@ -8,7 +8,6 @@ header
     z-index: 100;
     right: 0;
     left: 0;
-    top:0;
 
     height: 100px;
 
@@ -16,8 +15,12 @@ header
 
     background: transparent;
 }
-.bRed{
-    background: #b01313;
+.x_tab_box1{
+    height: 100px;
+
+    text-align: center;
+
+    background: #be1e21;
 }
 .x_login_box_in
 {
@@ -40,11 +43,19 @@ header
 
     justify-content: space-around;
 }
+.x_login_box_in1{
+    height: 30px;
+    background: #000;
+}
 .x_login_box_in a
 {
     font-size: 14px;
 
     color: #d3d3d3;
+}
+.x_login_box_in1 a{
+    font-size: 14px;
+    color: #fff;
 }
 .x_logo_box
 {
@@ -54,8 +65,21 @@ header
 }
 .x_tabs
 {
-    margin-top: 56px;
     margin-right: -10px;
+}
+.h_tabs{
+    margin-right: -10px;
+}
+.h_tabs a{
+    font-size: 16px;
+    color: #fff;
+    width: 100px;
+    height: 60px;
+    padding-top: 40px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .x_tabs li
 {
@@ -64,12 +88,11 @@ header
     display: flex;
     float: left;
 
-    width: 80px;
-    height: inherit;
-    margin-left: 20px;
+    width: 100px;
+    height: 100px;
 
     color: #fff;
-
+    background: transparent;
     align-items: center;
     justify-content: center;
 }
@@ -97,7 +120,7 @@ footer
 }
 .footer_list li:nth-child(5)
 {
-    width: 270px;
+    width: 300px;
 }
 .qr_box
 {
@@ -107,7 +130,7 @@ footer
 {
     width: 80px;
     height: 120px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .footer_title
 {

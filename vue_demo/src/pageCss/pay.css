@@ -1,0 +1,34 @@
+.pay_box{
+    width: 100%;
+    box-shadow: 0 10px 50px #eee inset;
+}
+.pay_list{
+    width: 100%;
+}
+.pay_list_title{
+    font-size: 22px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.sel{
+    color: #cb8233;
+}
+.w700{
+    width: 700px;
+}
+.bY{
+    background: #d6a241;
+}
+.fw{
+    font-weight: 300;
+}
+.bbd{
+    border-bottom: 1px dashed #fff;
+}
+.flex1{
+    width: 1%;
+    flex: 1;
+}
+.coo_list{
+    flex-wrap: wrap;
+}

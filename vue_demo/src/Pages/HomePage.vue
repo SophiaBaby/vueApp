@@ -1,6 +1,6 @@
 <template>
     <div>
-        <carousel></carousel>
+        <section><img src="../img/homepage/banner.png" alt=""></section>
         <section class="profile">
             <div class="container just_around">
                 <div class="profile_img">
@@ -74,7 +74,8 @@
 import jSlide from '../components/J_slide.vue'
 import centerTitle from '../components/centerTitle'
 import newsItem from '../components/newsItem'
-import carousel from '../components/util/carousel'
+//  import carousel from '../components/util/carousel.vue'
+import { Carousel, Slide } from 'vue-carousel'
 export default {
   name: 'homePage',
   data () {
@@ -94,6 +95,7 @@ export default {
       scroll: false
     }
   },
+
   mounted: function () {
     var _this = this
     this.$http.get('/api/home_profession').then((response) => {
@@ -104,17 +106,14 @@ export default {
       _this.items = response
     })
     window.addEventListener('scroll', this.handleScroll)
-    var data = JSON.stringify({
-      newsType: 'groupNews',
+    var data = {
+      newsType: 'importantNews',
       pageNo: 0,
       size: 10
-    })
-    this.$http({
-      method: 'POST',
-      url: 'dev/news/titleList',
-      data: data
-    }).then(function (data) {
-      console.log(data)
+    }
+    this.$http.post('futeng/news/list', data).then((response) => {
+      response = response.body
+      console.log(response)
     })
   },
   methods: {
@@ -123,16 +122,14 @@ export default {
     },
     unshow: function (event, index) {
       this.items[index].sel = false
-    },
-    handleScroll () {
-      document.body.scrollTop
     }
   },
   components: {
-    'carousel': carousel,
-    'newsItem': newsItem,
-    'jSlide': jSlide,
-    'centerTitle': centerTitle
+    Carousel,
+    Slide,
+    newsItem,
+    jSlide,
+    centerTitle
   }
 }
 
@@ -142,4 +139,24 @@ export default {
     @import "../css/lunbo.css";
     @import "../pageCss/homePage.css";
     @import "../css/transition.css";
+    #container {
+        padding: 0 60px;
+    }
+
+    .VueCarousel-slide {
+        position: relative;
+        background: #42b983;
+        color: #fff;
+        font-family: Arial;
+        font-size: 24px;
+        text-align: center;
+        min-height: 100px;
+    }
+
+    .label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 </style>

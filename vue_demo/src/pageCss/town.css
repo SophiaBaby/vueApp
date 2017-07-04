@@ -1,0 +1,71 @@
+.town_title_img{
+    margin: 0 auto;
+}
+.w500{
+    width: 500px;
+}
+.town_title{
+    padding: 100px 0 70px;
+}
+.just_item{
+    width: 1%;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+.cBlue{
+    color: #1f36a3;
+}
+.bBlue{
+    background:#2a40a8 ;
+}
+.f_end{
+    display: flex;
+    justify-content: flex-end;
+}
+.ver{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.fw200{
+    font-weight: 200;
+}
+.ml-20{
+    margin-left: -33px;
+}
+.mr-20{
+    margin-right: -33px;
+}
+.c9f{
+    color: #99ffff;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.w570{
+    width: 570px;
+}
+.suggestion input{
+    width: 100%;
+    height: 48px;
+    border: 1px solid #eee;
+    outline: none;
+    padding-left: 20px;
+    background: #fff;
+}
+.suggestion textarea{
+    width: 100%;
+    height: 170px;
+    border: 1px solid #eee;
+    padding-left: 20px;
+}
+.suggestion .submit{
+    width: 170px;
+    height: 50px;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    line-height: 50px;
+}

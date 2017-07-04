@@ -1,0 +1,30 @@
+.coo_title{
+    color: #ff0000;
+    font-size: 24px;
+    margin-top: 50px;
+}
+.coo_content{
+    font-size: 18px;
+    color: #777777;
+    margin-top: 15px;
+    margin-bottom: 45px;
+}
+.coo_list_small{
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 8px;
+}
+.line_dot{
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #cecdcd;
+}
+.coo_des{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 40px;
+    background: rgba(0,0,0,0.7);
+}
