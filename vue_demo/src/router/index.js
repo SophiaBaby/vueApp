@@ -15,32 +15,40 @@ import Found from '../Pages/group/found.vue'
 import Town from '../Pages/group/town.vue'
 import Beijing from '../Pages/group/beijing.vue'
 import Henan from '../Pages/group/henan.vue'
+import Human from '../Pages/culture/human.vue'
+import Thought from '../Pages/culture/thought.vue'
 
 Vue.use(Router)
 
 var routes = [
   {path: '/', name: 'Hello', component: HomePage},
-  {path:
-    '/news',
+  {path: '/news',
     name: 'news',
     component: News,
     children: [
-      {path: '/', name: 'pay', component: Pay},
-      {path: '/found', name: 'found', component: Found},
-      {path: '/pay',
+      {path: '/', name: 'Internet', component: Internet},
+      {path: 'found', name: 'found', component: Found},
+      {path: 'pay',
         name: 'pay',
         component: Pay,
         children: [
           {path: '/', name: 'beijing', component: Beijing},
-          {path: '/beijing', name: 'beijing', component: Beijing},
-          {path: '/henan', name: 'henan', component: Henan}
+          {path: 'beijing', name: 'beijing', component: Beijing},
+          {path: 'henan', name: 'henan', component: Henan}
         ]
       },
-      {path: '/internet', name: 'internet', component: Internet},
-      {path: '/town', name: 'town', component: Town}]
+      {path: 'town', name: 'town', component: Town}]
   },
   {path: '/about', name: 'about', component: About},
-  {path: '/culture', name: 'culture', component: Culture},
+  {path: '/culture',
+    name: 'culture',
+    component: Culture,
+    children: [
+      {path: '/', name: 'thought', component: Thought},
+      {path: 'human', name: 'human', component: Human}
+
+    ]
+  },
   {path: '/profession', name: 'profession', component: Profession}
 ]
 

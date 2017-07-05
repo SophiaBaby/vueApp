@@ -1,6 +1,13 @@
 <template>
     <div>
-        this is culture page!
+        <div class="container">
+            <ul class="oH container">
+                <router-link to="/culture/" exact class="cul_title fl mr20" tag="li">核心理念</router-link>
+                <router-link to="/culture/human" class="cul_title fl ml20" tag="li">人才发展</router-link>
+            </ul>
+        </div>
+
+        <router-view></router-view>
     </div>
 </template>
 
@@ -11,11 +18,9 @@
 </script>
 
 <style scoped>
-    div{
-        width: 100%;
-        height: 500px;
-        background: yellowgreen;
-        font-size: 50px;
-        color: firebrick;
+    @import "../pageCss/culture.css";
+    li.router-link-active {
+        color: #ff0000;
+        border-bottom: 3px solid #ff0000;
     }
 </style>
