@@ -1,7 +1,14 @@
 <template>
   <div class="about">
-    <span>this is About Page!</span>
-    <news msg="this is a good day"></news>
+      <div class="container">
+          <ul class="profession_index oH">
+              <router-link to="/news/found" class="fl" tag="li">资产管理</router-link>
+              <router-link to="/news/" exact class="fl" tag="li">互联网</router-link>
+              <router-link to="/news/pay" class="fl" tag="li">支付服务</router-link>
+              <router-link to="/news/town" class="fl" tag="li">财富小镇</router-link>
+          </ul>
+      </div>
+      <router-view></router-view>
   </div>
 </template>
 
@@ -16,11 +23,5 @@
 </script>
 
 <style scoped>
-  div.about{
-    margin-top: 200px;
-    width: 100%;
-    height: 200px;
-    background: #fff4f3;
-    font-size: 50px;
-    }
+
 </style>

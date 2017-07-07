@@ -32,14 +32,14 @@ module.exports = {
     proxyTable: {
       // proxy all requests starting with /api to jsonplaceholder
       '/futeng': {
-        // target: 'http://114.251.53.22/futeng',
-        target: 'http://192.168.1.228:9009/futeng',
+        target: 'http://114.251.53.22/futeng',
+        // target: 'http://192.168.1.228:9009/futeng',
         changeOrigin: true,
         pathRewrite: {
           '^/futeng': ''
         },
         filter: function (pathname, req) {
-          return pathname.match('^/futeng') && req.method === 'POST'
+          return pathname.match('^/futeng')
         }
       }
     },

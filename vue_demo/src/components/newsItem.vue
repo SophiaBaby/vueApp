@@ -1,13 +1,13 @@
 <!--新闻列表项-->
 <template>
-    <li class="news_list_item">
-        <a class="dis_inB" href="#">{{newsTitle}}</a>
-        <span class="fr c9">24/03</span>
-    </li>
+    <router-link :to="{name: 'newsDetail',  params:{id: newsId}}"   tag="li" class="news_list_item">
+        <a class="dis_inB" href="#">{{newsTitle}}</a>{{newsId}}
+        <span class="fr c9">{{newsData}}</span>
+    </router-link>
 </template>
 <script>
   export default{
     name: 'newsItem',
-    props: ['newsTitle']
+    props: ['newsTitle', 'newsData', 'newsId']
   }
 </script>

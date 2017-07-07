@@ -17,39 +17,44 @@ import Beijing from '../Pages/group/beijing.vue'
 import Henan from '../Pages/group/henan.vue'
 import Human from '../Pages/culture/human.vue'
 import Thought from '../Pages/culture/thought.vue'
+import newsDetail from '../Pages/about/newsDetail.vue'
+import Login from '../Pages/log/log.vue'
+import Register from '../Pages/log/register.vue'
 
 Vue.use(Router)
 
 var routes = [
   {path: '/', name: 'Hello', component: HomePage},
   {path: '/news',
-    name: 'news',
     component: News,
     children: [
       {path: '/', name: 'Internet', component: Internet},
       {path: 'found', name: 'found', component: Found},
       {path: 'pay',
-        name: 'pay',
         component: Pay,
         children: [
           {path: '/', name: 'beijing', component: Beijing},
-          {path: 'beijing', name: 'beijing', component: Beijing},
           {path: 'henan', name: 'henan', component: Henan}
         ]
       },
       {path: 'town', name: 'town', component: Town}]
   },
-  {path: '/about', name: 'about', component: About},
+  {path: '/about',
+    name: 'about',
+    component: About,
+    children: []
+  },
   {path: '/culture',
-    name: 'culture',
     component: Culture,
     children: [
       {path: '/', name: 'thought', component: Thought},
       {path: 'human', name: 'human', component: Human}
-
     ]
   },
-  {path: '/profession', name: 'profession', component: Profession}
+  {path: '/profession', name: 'profession', component: Profession},
+  {path: '/newsDetail:id', name: 'newsDetail', component: newsDetail},
+  {path: '/login', name: 'login', component: Login},
+  {path: '/register', name: 'register', component: Register}
 ]
 
 export default new Router({

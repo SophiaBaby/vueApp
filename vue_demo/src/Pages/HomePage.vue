@@ -9,10 +9,8 @@
                     </p>
                     <div class="line_gray mt10 mb20"><div class="line_gray_inleft"></div></div>
                     <div class="news_img">
-                        <p class="c5 f16 mb20">习特会前夕 高层智囊发声！这4条是中美经济大概率事件
-                            习特会前夕 高层智囊发声！
-                        </p>
-                        <a href="#"><img class="w h" src="../../static/img/Fortune-town.png" alt=""/></a>
+                        <p class="c5 f16 mb20">{{bigNews.title}}</p>
+                        <a href="#"><img class="w h" :src="bigNews.pictureUrl" alt=""/></a>
                     </div>
                 </div>
                 <div class="news_list">
@@ -20,7 +18,12 @@
                         <a class="c9 f14" href="#">更多</a>
                     </p>
                     <ul class="news_list" >
-                        <newsItem v-for="item in news" :key="item.id" :news-title="item.newsTitle"></newsItem>
+                        <newsItem v-for="item in news"
+                                  :key="item.id"
+                                  :news-id="item.id"
+                                  :news-title="item.title"
+                                  :news-data="item.showTime">
+                        </newsItem>
                     </ul>
                 </div>
                 <div class="groupFile">
@@ -44,7 +47,10 @@
             <div class="container">
                 <centerTitle cn_title="集团业务" en_title="GROUP BUSINESS"></centerTitle>
                 <ul class="container just_around wrap">
-                    <li v-for="(item,index) in items" class="internet pr mb30" @mouseover="show($event,index)"  @mouseleave="unshow($event,index)">
+                    <li v-for="(item,index) in items"
+                        class="internet pr mb30"
+                        @mouseover="show($event,index)"
+                        @mouseleave="unshow($event,index)">
                         <div v-if="item.sel" class="cover_bg"></div>
                         <a class="w h oH" href="#"><img class="w" v-bind:src="'../../../static/img/'+ item.url" alt=""/></a>
                         <div class="cover ver_end pb50 pl45 pr30">
@@ -74,7 +80,6 @@
 import jSlide from '../components/J_slide.vue'
 import centerTitle from '../components/centerTitle'
 import newsItem from '../components/newsItem'
-//  import carousel from '../components/util/carousel.vue'
 import { Carousel, Slide } from 'vue-carousel'
 export default {
   name: 'homePage',
@@ -86,7 +91,8 @@ export default {
         LastName: 'Doe',
         Age: 30
       },
-      news: [{id: 1, newsTitle: '这是一个美好的时代'}, {id: 2, newsTitle: '这是一个美好的时代'}],
+      news: [],
+      bigNews: [],
       cooImgs: [{des: '富腾智库', src: '../../static/img/coo/hexun.png'},
         {des: '投资参股企业', src: '../../static/img/coo/zhengfadaxue.png'},
         {des: '战略合作伙伴', src: '../../static/img/coo/gonghang.png'
@@ -97,23 +103,33 @@ export default {
   },
 
   mounted: function () {
-    var _this = this
+    let _this = this
     this.$http.get('/api/home_profession').then((response) => {
       response = response.body.data.content
-      for (var i = 0; i < response.length; i++) {
+      for (let i = 0; i < response.length; i++) {
         response[i].sel = false
       }
       _this.items = response
     })
     window.addEventListener('scroll', this.handleScroll)
-    var data = {
+    let data = {
+      newsType: 'groupNews',
+      pageNo: 0,
+      size: 10
+    }
+    this.$http.post('futeng/news/titleList', data).then((response) => {
+      response = response.body.content
+      _this.news = response
+    })
+    let bigNewsData = {
       newsType: 'importantNews',
       pageNo: 0,
       size: 10
     }
-    this.$http.post('futeng/news/list', data).then((response) => {
-      response = response.body
+    this.$http.post('futeng/news/titleList', bigNewsData).then((response) => {
+      response = response.body.content[0]
       console.log(response)
+      _this.bigNews = response
     })
   },
   methods: {

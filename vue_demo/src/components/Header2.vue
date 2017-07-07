@@ -3,9 +3,9 @@
         <div class="x_login_box_in1 w">
             <div class="container">
                 <div class="fr">
-                    <a class="fl" href="#">登录</a>
+                    <router-link class="fl" to="/login">登录</router-link>
                     <span class="f12 fl cff ml10 mr10">|</span>
-                    <a class="fl" href="#">注册</a>
+                    <router-link class="fl" to="/register">注册</router-link>
                 </div>
             </div>
         </div>
@@ -15,11 +15,11 @@
                     <img src="../img/header_footer/logo.png" alt=""/>
                 </div>
                 <div class="x_tabs fr">
-                    <router-link to="/" exact tag="li">首页</router-link>
-                    <router-link to="/about"  tag="li">关于富腾</router-link>
-                    <router-link to="/culture"  tag="li">企业文化</router-link>
-                    <router-link to="/news"  tag="li">集团业务</router-link>
-                    <router-link to="/profession"  tag="li">业务合作</router-link>
+                    <router-link class="cp" to="/" exact tag="li">首页</router-link>
+                    <router-link class="cp" to="/about"  tag="li">关于富腾</router-link>
+                    <router-link class="cp" to="/culture"  tag="li">企业文化</router-link>
+                    <router-link class="cp" to="/news"  tag="li">集团业务</router-link>
+                    <router-link class="cp" to="/profession"  tag="li">业务合作</router-link>
                 </div>
 
             </div>

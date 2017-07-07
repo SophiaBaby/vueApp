@@ -39,6 +39,13 @@
     font-size: 16px;
     border-bottom: 1px dashed #ddd;
 }
+.news_list_item a{
+    width: 288px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+}
 .news_list_item:before{
     content: '';
     width: 1px;
