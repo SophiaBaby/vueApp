@@ -61,9 +61,20 @@
           phoneNum: this.tel,
           password: this.pw
         }
-        this.$http.post('futeng/user/login', data).then((response) => {
+        let that = this
+        this.$http.post('futeng/user/login', data).then(response => {
+          // get body data
           response = response.body
           console.log(response)
+          sessionStorage.userName = response.name
+          that.$emit('userSignIn', that.userName)
+          this.$router.push({
+            path: '/'
+          })
+        }, response => {
+          response = response.body
+          console.log('失败')
+          alert(response.message)
         })
       }
     }

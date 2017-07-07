@@ -10,7 +10,19 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      userName: sessionStorage.userName
+    }
+  },
+  methods: {
+    //  子组件(register)将用户名传过来
+    userSignIn: function (userName) {
+      sessionStorage.userName = userName
+      this.userName = sessionStorage.userName
+    }
+  }
 }
 
 </script>

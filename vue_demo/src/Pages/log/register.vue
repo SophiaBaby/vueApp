@@ -12,14 +12,13 @@
                         <div class="mt15">
                             <label for="tel">*手机号</label>
                             <input v-model="tel" id="tel" type="text" placeholder="请正确填写11位手机号"/>
-                            <input id="checkCodeBtn"
+                            <div id="checkCodeBtn" v-model="count"
                                    class="getCheckNum tc cp mr15"
-                                   value="获取验证码"
-                                   @click="getCheck()"
-                            />
+                                   @click="getCheck()">{{count}}
+                            </div>
                         </div>
                         <div class="mt15">
-                            <label for="check">验证码</label>
+                            <label  for="check">验证码</label>
                             <input v-model="checkCode" id="check" type="text" placeholder="请输入短信验证码"/>
                         </div>
                         <div class="mt15">
@@ -60,7 +59,8 @@
         email: '',
         checkCode: '',
         pw: '',
-        pw1: ''
+        pw1: '',
+        count: '获取验证码'
       }
     },
     watch: {
@@ -78,8 +78,15 @@
         }
         console.log(data)
         this.$http.post('futeng/checkCode/register', data).then((response) => {
-          response = response.body
-          console.log(response)
+          this.count = 10
+          this.interval = setInterval(() => {
+            if (this.count > 0) {
+              this.count --
+            } else {
+              this.count = '获取验证码'
+              clearInterval(this.interval)
+            }
+          }, 1000)
         })
       },
       register: function () {

@@ -17,7 +17,7 @@
                     <span id="date">{{date}}</span>
                 </p>
                 <img class="w" :src="src" alt="">
-                <span>{{$route.params.id }}</span>
+                <!--<span>{{$route.params.id }}</span>-->
                 <p class="news_all_content f16 c7 mb50" id="newsContent">
                     {{content}}
                 </p>
@@ -39,7 +39,7 @@
         }
       },
       mounted: function () {
-        this.$http.get('/futeng/news/newsDetail?id=' + this.$route.params.id).then((reponse) => {
+        this.$http.post('/futeng/news/newsDetail', {id: this.$route.params.id}).then((reponse) => {
           console.log(reponse.body)
           reponse = reponse.body
           this.src = reponse.pictureUrl

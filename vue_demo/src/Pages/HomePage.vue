@@ -138,6 +138,9 @@ export default {
     },
     unshow: function (event, index) {
       this.items[index].sel = false
+    },
+    userSignIn: function (userName) {
+      console.log('登陆了吧')
     }
   },
   components: {
