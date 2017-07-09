@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section><img src="../img/homepage/banner.png" alt=""></section>
+      <carousel></carousel>
         <section class="profile">
             <div class="container just_around">
                 <div class="profile_img">
@@ -80,7 +80,7 @@
 import jSlide from '../components/J_slide.vue'
 import centerTitle from '../components/centerTitle'
 import newsItem from '../components/newsItem'
-import { Carousel, Slide } from 'vue-carousel'
+import carousel from '../components/util/carousel.vue'
 export default {
   name: 'homePage',
   data () {
@@ -144,8 +144,7 @@ export default {
     }
   },
   components: {
-    Carousel,
-    Slide,
+    carousel,
     newsItem,
     jSlide,
     centerTitle
